@@ -30,37 +30,33 @@ class _InputPageState extends State<InputPage> {
                 child: Row(
               children: <Widget>[
                 Expanded(
-                    child: GestureDetector(
-                  onTap: () {
+                    child: ReusableCard(
+                  onPress: () {
                     setState(() {
                       seletedGender = Gender.male;
                     });
                   },
-                  child: ReusableCard(
-                    color: seletedGender == Gender.male
-                        ? activeCardColor
-                        : inactiveCardColor,
-                    cardChild: IconContent(
-                      iconData: FontAwesomeIcons.mars,
-                      title: 'MALE',
-                    ),
+                  color: seletedGender == Gender.male
+                      ? activeCardColor
+                      : inactiveCardColor,
+                  cardChild: IconContent(
+                    iconData: FontAwesomeIcons.mars,
+                    title: 'MALE',
                   ),
                 )),
                 Expanded(
-                    child: GestureDetector(
-                  onTap: () {
+                    child: ReusableCard(
+                  onPress: () {
                     setState(() {
                       seletedGender = Gender.female;
                     });
                   },
-                  child: ReusableCard(
-                    color: seletedGender == Gender.female
-                        ? activeCardColor
-                        : inactiveCardColor,
-                    cardChild: IconContent(
-                      iconData: FontAwesomeIcons.venus,
-                      title: 'FEMALE',
-                    ),
+                  color: seletedGender == Gender.female
+                      ? activeCardColor
+                      : inactiveCardColor,
+                  cardChild: IconContent(
+                    iconData: FontAwesomeIcons.venus,
+                    title: 'FEMALE',
                   ),
                 )),
               ],
